@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>foodhub</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body 
+{
+background: url('1.jpg') no-repeat;
+background-size: cover;
+font-family: Arial, Helvetica, sans-serif;
+}
+.inpt {
+    width: 62%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 200px;
+}
+.inpt1
+{
+   width: 30%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 200px; 
+}
+.inpt2
+{
+    width: 30%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-left: 17px;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+	top:140%;
+	left:50%;
+	position:absolute;
+	transform:translate(-50%, -50%%);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.lab
+{
+  margin-left: 200px;  
+}
+.lab1
+{
+    margin-left: 290px;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container1 {
+    margin-top: 75px;
+    border-radius: 50px;
+    background-color: #f2f2f2;
+    padding: 25px;
+opacity: .9;
+}
+</style>
+<script type="text/javascript">
+    function abd()
+        {
+            var user=document.getElementById('fname');
+            var phone=document.getElementById('phone1');
+            var email=document.getElementById('Email1');
+            var book=document.getElementById('booking1');
+            var time=document.getElementById('time1');
+            if(user.value.trim()==""|| phone.value.trim()==""||email.value.trim()==""||book.value.trim()=="")
+            {
+                alert("No blank value allowed");
+                return false;
+            }
+            else
+            {
+            alert("Your Table is Booked");
+             true;
+            }
+        }
+</script>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-expand-md bg-danger navbar-dark fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand text-white font-weight-bold">Food Hub</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarcollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="navbar-item"><a href="index.html" class="nav-link text-white">Home</a></li>
+                <li class="navbar-item"><a href="tablebook.html" class="nav-link text-white">Reservation</a></li>
+                <li class="navbar-item"><a href="#c1" class="nav-link text-white">Service</a></li>
+                <li class="navbar-item"><a href="foodsign.html" class="nav-link text-white">Signin</a></li>
+                <li class="navbar-item"><a href="foodsignup.html" class="nav-link text-white">Signup</a></li>
+                <li class="navbar-item"><a href="ourteam.html" class="nav-link text-white">Contact</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link text-white">About</a></li>
+            </ul>   
+            </div>
+        </div>
+    </nav>
+    </div>
+<div class="container1">
+    <h3 style="color:red;">Book Your Table</h3>
+  <form onsubmit="return abd()">
+    <br><label for="fname" class="lab">Name : </label><br>
+    <input class="inpt" type="text" id="fname" name="firstname"><br>
+    <label for="phone" class="lab">Phone : </label><br>
+    <input class="inpt" type="text" id="phone1" name="phone"><br>
+    <label for="Email" class="lab">Email : </label><br>
+    <input type="email"class="inpt" id="Email1" name="Email"><br>
+    <label for="booking" class="lab">Booking Date : </label>
+    <label for="time" class="lab1">Booking Time : </label><br>
+    <input type="Date"class="inpt1" id="booking1" name="book">
+    <input type="Time" class="inpt2" id="time1" name="booking time" placeholder="11:15 AM"><br>
+    <label for="party" class="lab">Party Size : </label><br>
+    <select class="inpt1">
+        <option>1-5</option>
+        <option>6-10</option>
+        <option>11-15</option>
+        <option>16-20</option>
+        <option>Above 20</option>
+    </select><br>
+    <label for="subject" class="lab">Message : </label><br>
+    <textarea id="subject" class="inpt" name="subject" placeholder="Write something.." style="height:200px"></textarea><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
